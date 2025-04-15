@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  color: black;
+}
+
+.image-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+.image-container {
+  height: 50vh;
+  mix-blend-mode: screen;
+}
+
+.image-container img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+/* Overlay styles */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0;
+  z-index: -1;
+  mix-blend-mode: screen;
+}
+
+.image-container:hover {
+  filter: invert(100%);
+} 
+
+/* Show overlay on hover using :has() */
+.image-grid:has(#image1:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift1.png');
+
+}
+
+.image-grid:has(#image2:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift2.png');
+
+}
+
+.image-grid:has(#image3:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift3.png');
+
+}
+
+.image-grid:has(#image4:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift4.png');
+
+}
+
+.image-grid:has(#image5:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift5.png');
+
+}
+
+.image-grid:has(#image6:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift6.png');
+
+}
+
+.image-grid:has(#image7:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift7.png');
+
+}
+
+.image-grid:has(#image8:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift8.png');
+
+}
+
+
+.image-grid:has(#image9:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift9.png');
+
+}
+
+.image-grid:has(#image10:hover) + .image-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  background-image: url('../images/Schrift10.png');
+
+}
